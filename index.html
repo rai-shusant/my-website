@@ -19,10 +19,26 @@
         <span>
           <img class="logo" src="./public/logo.png" alt="logo" />
         </span>
-        <button class="hamburger">
-          <span></span>
-          <span></span>
-        </button>
+
+        <div class="menu-wrapper">
+          <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- ?? Menu code -->
+          <div class="menu" id="menu">
+            <span>Menu</span>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="./breakout.html">Break Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
     </div>
 
@@ -82,4 +98,14 @@
       </div>
     </div>
   </body>
+
+  <!-- ?? javascript -->
+  <script>
+    const hamburgerButton = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    hamburgerButton.onclick = function () {
+      menu.classList.toggle("active");
+    };
+  </script>
 </html>
